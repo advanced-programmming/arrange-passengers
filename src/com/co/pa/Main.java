@@ -21,8 +21,8 @@ public class Main {
      * 6. shouldDoOkWithListWith2GroupsOk
      * 7. shouldDoOkWithListWith3GroupsOk
      * 8. shouldDoOkWithListWithMixedGroupsOk
-     * 9. shouldDoOkWithListWithoutGroupsAndSameLoyalty
-     * 10. shouldDoOkWithListWithoutGroupsAndDifferentLoyalty
+     * 9. shouldDoOkWithListWithoutGroupsAndSameLoyaltyOk
+     * 10. shouldDoOkWithListWithoutGroupsAndDifferentLoyaltyOk
      */
 
     public static void main(String[] args) {
@@ -42,11 +42,11 @@ public class Main {
         Map<String, Integer> minValueByGroup = new HashMap<>();
         Map<String, List<Passenger>> mapWithGroups = new HashMap<>();
 
-        if( passengerList != null && !passengerList.isEmpty()) {
+        if(passengerList != null && !passengerList.isEmpty()) {
             passengerList.forEach(passenger -> {
                 String br = passenger.getBookingReference();
 
-                if (mapWithGroups.containsKey(br)) {
+                if(mapWithGroups.containsKey(br)) {
                     mapWithGroups.get(br).add(passenger);
 
                     int min = minValueByGroup.get(br) > passenger.getLoyaltyClass() ?
