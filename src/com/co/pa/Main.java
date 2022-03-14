@@ -33,7 +33,7 @@ public class Main {
 
     public static List<Passenger> getCorrectBoardingOrder(List<Passenger> passengerList){
         List<Passenger> result = updateLoyaltyPerGroups(passengerList);
-        result.sort(Comparator.comparing(passenger -> passenger.getLoyaltyClass));
+        result.sort(Comparator.comparing(passenger -> passenger.getLoyaltyClass()));
         return result;
     }
 
