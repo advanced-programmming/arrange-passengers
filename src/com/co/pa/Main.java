@@ -87,9 +87,9 @@ public class Main {
 }
 
 class Passenger {
-    public String name;
-    public String bookingReference;
-    public int loyaltyClass;
+    private String name;
+    private String bookingReference;
+    private int loyaltyClass;
 
     public Passenger(String name, String bookingReference, int loyaltyClass) {
         this.name = name;
